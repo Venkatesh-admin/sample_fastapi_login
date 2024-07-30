@@ -84,10 +84,14 @@ Make sure you have a PostgreSQL database set up. Update the `DATABASE_URL` in `s
 ## Running the Application
 
 Start the FastAPI application using uvicorn:
+
+
 **Windows:**
 ```bash
 uvicorn main:app --reload
 ```
+
+**Linux**
 ```bash
 python3 -m uvicorn main:app --reload
 ```
@@ -110,7 +114,7 @@ The API will be available at `http://127.0.0.1:8000`.
 
 ### Login
 
-- **URL:** `/login`
+- **URL:** `/token`
 - **Method:** `POST`
 - **Request Body:**
     ```json
