@@ -1,87 +1,7 @@
-Here's an updated `README.md` to reflect your folder structure:
-
-```markdown
 # FastAPI Authentication Example
 
 This is a simple FastAPI application that provides two API endpoints for user registration and login.
 
-## Requirements
-
-- Python 3.8+
-- FastAPI
-- uvicorn
-- SQLAlchemy
-- pydantic
-- bcrypt
-- databases
-
-## Installation
-
-1. Clone the repository:
-
-    ```bash
-    git clone https://github.com/yourusername/sample_fastapi_login.git
-    cd sample_fastapi_login
-    ```
-
-2. Create and activate a virtual environment:
-
-    ```bash
-    python -m venv venv
-    source venv/bin/activate  # On Windows use `venv\Scripts\activate`
-    ```
-
-3. Install the dependencies:
-
-    ```bash
-    pip install -r req.txt
-    ```
-
-## Database Setup
-
-Make sure you have a PostgreSQL database set up. Update the `DATABASE_URL` in `sql_app/database.py` with your database credentials.
-
-## Running the Application
-
-Start the FastAPI application using uvicorn:
-
-```bash
-uvicorn main:app --reload
-```
-
-The API will be available at `http://127.0.0.1:8000`.
-
-## API Endpoints
-
-### Register
-
-- **URL:** `/register`
-- **Method:** `POST`
-- **Request Body:**
-    ```json
-    {
-        "username": "your_username",
-        "password": "your_password"
-    }
-    ```
-- **Response:**
-    - `201 Created` on success
-    - `400 Bad Request` if the username is already taken
-
-### Login
-
-- **URL:** `/login`
-- **Method:** `POST`
-- **Request Body:**
-    ```json
-    {
-        "username": "your_username",
-        "password": "your_password"
-    }
-    ```
-- **Response:**
-    - `200 OK` with a JWT token on success
-    - `401 Unauthorized` if the credentials are incorrect
 
 ## Project Structure
 
@@ -121,3 +41,82 @@ sample_fastapi_login
     ```
 
 The API will be available at `http://127.0.0.1:8000`.
+
+
+
+
+## Requirements
+
+- Python 3.8+
+- FastAPI
+- uvicorn
+- SQLAlchemy
+- pydantic
+- bcrypt
+- databases
+
+## Installation
+
+1. Clone the repository:
+
+    ```bash
+    git clone https://github.com/Venkatesh-admin/sample_fastapi_login.git
+    cd sample_fastapi_login
+    ```
+
+2. Create and activate a virtual environment:
+
+    ```bash
+    python -m venv venv
+    source venv/bin/activate  # On Windows use `venv\Scripts\activate`
+    ```
+
+3. Install the dependencies:
+
+    ```bash
+    pip install -r req.txt
+    ```
+
+## Database Setup
+
+Make sure you have a PostgreSQL database set up. Update the `DATABASE_URL` in `sql_app/database.py` with your database credentials.
+
+## Running the Application
+
+Start the FastAPI application using uvicorn:
+**Windows:**
+```bash
+uvicorn main:app --reload
+```
+```bash
+python3 -m uvicorn main:app --reload
+```
+
+The API will be available at `http://127.0.0.1:8000`.
+
+## API Endpoints
+
+### Register
+
+- **URL:** `/register`
+- **Method:** `POST`
+- **Request Body:**
+    ```json
+    {
+        "username": "your_username",
+        "password": "your_password"
+    }
+    ```
+
+### Login
+
+- **URL:** `/login`
+- **Method:** `POST`
+- **Request Body:**
+    ```json
+    {
+        "username": "your_username",
+        "password": "your_password"
+    }
+    ```
+
