@@ -13,8 +13,5 @@ RUN pip install --no-cache-dir -r req.txt
 # Make port 8000 available to the world outside this container
 EXPOSE 8000
 
-# Define environment variable
-ENV FASTAPI_APP main:app
-
 # Run app.py when the container launches
 CMD ["uvicorn", "--host", "0.0.0.0", "--port", "8000", "--reload", "main:app"]
